@@ -1,0 +1,16 @@
+{
+  "nativePlugins": [
+    {
+      "plugins": [
+        {
+          "type": "module",
+          "name": "Phone-Authority",
+          "class": "io.dcloud.auth.StUpgradeUtils"
+        }
+      ]
+    },
+    {
+      "hooksClass": "io.dcloud.auth.Plugin_AppProxy"
+    }
+  ]
+}

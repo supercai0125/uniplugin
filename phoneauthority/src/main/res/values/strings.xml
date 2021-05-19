@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">TestPlugin</string>
+    <string name="ble_not_supported">BLE is not supported</string>
+    <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
+    <string name="title_devices">蓝牙设备扫描</string>
+    <string name="connected">已经连接</string>
+    <string name="disconnected">已经断开</string>
+    <string name="no_data">没有数据</string>
+    <string name="label_device_address">设备地址:</string>
+    <string name="label_config_version">配置版本号:</string>
+    <string name="label_band_num">呼救器编号:</string>
+    <string name="label_still_sensitivity">高灵敏度阈值:</string>
+    <string name="label_still_time">高灵敏度时间:</string>
+    <string name="label_motion_value">低灵敏度阈值:</string>
+    <string name="label_motion_time">低灵敏度时间:</string>
+    <string name="label_ranging_time">心跳包周期(ms):</string>
+    <string name="label_ranging_cycle">压力校准值:</string>
+    <string name="label_lost_cycle">蜂鸣器频率:</string>
+    <string name="label_syn_cycle">433频段:</string>
+    <string name="label_alarm_ranging_cycle">433功率:</string>
+    <string name="label_user_name">气压校准值:</string>
+    <string name="label_user_gender">分组:</string>
+    <string name="label_user_height">身高:</string>
+    <string name="label_user_weight">体重:</string>
+    <string name="label_user_age">年龄:</string>
+    <string name="label_user_blood_group">血型:</string>
+    <string name="label_user_common_hand">常用手:</string>
+
+    <string name="label_sensor_type">传感器类型:</string>
+    <string name="label_parameter_version">参数版本:</string>
+    <string name="label_register_current">寄存器0x22-LED电流:</string>
+    <string name="label_register_offset">寄存器0x3A-LED偏移:</string>
+    <string name="label_register_filter1">寄存器0x20-LED滤波放大1:</string>
+    <string name="label_register_filter2">寄存器0x20-LED滤波放大2:</string>
+    <string name="label_start_heart_collection">心率数据:</string>
+    <string name="label_heart_data_pack">心率数据包:</string>
+    <string name="label_x_acceleration_collection">X轴数据:</string>
+    <string name="label_y_acceleration_collection">Y轴数据:</string>
+    <string name="label_z_acceleration_collection">Z轴数据:</string>
+    <string name="label_acceleration_data_pack">加速度数据包:</string>
+    <string name="label_heart_real_collection">心率实时数据:</string>
+    <string name="label_heart_interval_collection">心率间隔时间（分钟）:</string>
+    <string name="label_heart_continued_collection">心率持续时间（S）:</string>
+
+    <string name="label_posture_data_pack">姿态数据总包:</string>
+    <string name="label_posture_few_data_pack">姿态数据包:</string>
+    <string name="label_posture">姿态状态:</string>
+    <string name="label_posture_start_time">姿态开始时间:</string>
+    <string name="label_posture_end_time">姿态结束时间:</string>
+    <string name="label_posture_step">姿态步数:</string>
+    <string name="label_posture_distance">姿态距离:</string>
+    <string name="label_posture_calories">姿态卡路里:</string>
+    <string name="label_heart_data_all_pack">心率数据总包:</string>
+    <string name="label_heart_few_data_pack">心率数据包:</string>
+    <string name="label_heart_time">心率时间:</string>
+    <string name="label_heart_value">心率值:</string>
+    <string name="mac_addr">MAC地址:</string>
+    <string name="label_state">连接状态:</string>
+    <!-- Menu items -->
+    <string name="menu_connect">连接</string>
+    <string name="menu_disconnect">断开</string>
+    <string name="menu_scan">扫描</string>
+    <string name="menu_stop">刷新界面</string>
+    <string name="label_device_addresss">设备地址:</string>
+    <string name="unknown_device">Unknown device</string>
+</resources>

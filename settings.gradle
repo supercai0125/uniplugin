@@ -1,0 +1,2 @@
+include ':app', ':phoneauthority'
+rootProject.name='uni_auth'

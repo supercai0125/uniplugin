@@ -1,0 +1,81 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="io.dcloud.auth" >
+
+    <uses-feature android:name="android.bluetooth.le" android:required="true"/>
+
+    <uses-permission
+            android:name="android.permission.AUTHENTICATE_ACCOUNTS"
+            android:maxSdkVersion="22" />
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission
+            android:name="android.permission.GET_ACCOUNTS"
+            android:maxSdkVersion="22" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <!--悬浮窗权限-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+
+    <application
+            android:allowBackup="true"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+
+        <activity
+                android:name="io.dcloud.auth.activity1.AliveActivity"
+                android:excludeFromRecents="true"
+                android:taskAffinity="io.dcloud.auth.live.keep"
+                android:theme="@style/KeepAliveTheme">
+        </activity>
+
+        <service android:name="io.dcloud.auth.service.ForegroundService" />
+        <service android:name="io.dcloud.auth.service.ForegroundService$InnerService" />
+
+
+        <service android:name="io.dcloud.auth.service.StickyService" />
+
+
+        <service
+                android:name="io.dcloud.auth.jobscheduler.AliveJobService"
+                android:permission="android.permission.BIND_JOB_SERVICE" />
+
+
+
+
+        <service android:name="io.dcloud.auth.account.AuthenticationService">
+            <!--<action android:name="android.accounts.AccountAuthenticator" /> 让系统能够找到这个账户服务-->
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data
+                    android:name="android.accounts.AccountAuthenticator"
+                    android:resource="@xml/account_authenticator" />
+        </service>
+
+        <service android:name="io.dcloud.auth.account.SyncService">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                    android:name="android.content.SyncAdapter"
+                    android:resource="@xml/sync_adapter" />
+        </service>
+
+        <provider
+                android:name="io.dcloud.auth.account.SyncProvider"
+                android:authorities="io.dcloud.auth.daemon.provider" />
+
+
+    </application>
+
+</manifest>
